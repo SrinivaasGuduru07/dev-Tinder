@@ -1,8 +1,8 @@
-const adminAuth=(req,res,next)=>{
-    console.log("Admin Auth is getting checked");
+const adminAuth = (req,res,next)=>{
+
+    console.log("Admin auth is getting checked!!");
 
     const token = "xyz";
-
     const isAdminAuthorized = token === "xyz";
 
     if(!isAdminAuthorized){
@@ -12,11 +12,12 @@ const adminAuth=(req,res,next)=>{
         next();
     }
 }
-const userAuth=(req,res,next)=>{
-    console.log("Admin Auth is getting checked");
 
-    const token = "xyz";
+const userAuth = (req,res,next)=>{
 
+    console.log("User auth is getting checked!!");
+
+    const token = "xyz123";
     const isAdminAuthorized = token === "xyz";
 
     if(!isAdminAuthorized){
@@ -26,8 +27,9 @@ const userAuth=(req,res,next)=>{
         next();
     }
 }
-module.exports={
+
+
+module.exports = {
     adminAuth,
     userAuth,
-
 }
